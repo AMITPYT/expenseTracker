@@ -1,0 +1,163 @@
+.dashboard {
+    padding: var(--spacing-lg) 0;
+    min-height: calc(100vh - 80px);
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+.dashboard-title {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+.dashboard-subtitle {
+    color: var(--text-secondary);
+    margin: 0.5rem 0 0 0;
+}
+
+.month-selector {
+    min-width: 200px;
+}
+
+.stats-grid {
+    margin-bottom: var(--spacing-lg);
+}
+
+.stat-card {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.stat-icon {
+    font-size: 3rem;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-tertiary);
+    border-radius: var(--radius-lg);
+}
+
+.stat-content {
+    flex: 1;
+}
+
+.stat-label {
+    margin: 0;
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.stat-value {
+    margin: 0.5rem 0 0 0;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.overall-progress-card {
+    margin-bottom: var(--spacing-lg);
+}
+
+.progress-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    margin-top: var(--spacing-md);
+}
+
+.recent-expenses {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-md);
+}
+
+.expense-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-sm);
+    background: var(--bg-tertiary);
+    border-radius: var(--radius-md);
+    transition: all var(--transition-base);
+}
+
+.expense-item:hover {
+    background: var(--bg-secondary);
+    transform: translateX(5px);
+}
+
+.expense-info {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.expense-icon {
+    font-size: 1.5rem;
+}
+
+.expense-description {
+    margin: 0;
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.expense-category {
+    margin: 0.25rem 0 0 0;
+    font-size: 0.875rem;
+    color: var(--text-muted);
+}
+
+.expense-amount {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.budgets-section {
+    margin-top: var(--spacing-xl);
+}
+
+.section-title {
+    margin-bottom: var(--spacing-md);
+}
+
+.empty-state {
+    padding: var(--spacing-xl);
+}
+
+.empty-state h3 {
+    margin-bottom: var(--spacing-sm);
+}
+
+.spinner-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+}
+
+@media (max-width: 768px) {
+    .dashboard-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--spacing-md);
+    }
+
+    .month-selector {
+        width: 100%;
+    }
+
+    .stat-value {
+        font-size: 1.5rem;
+    }
+}

@@ -1,0 +1,114 @@
+.budgets-page {
+    padding: var(--spacing-lg) 0;
+    min-height: calc(100vh - 80px);
+}
+
+.header-actions {
+    display: flex;
+    gap: var(--spacing-sm);
+    align-items: center;
+}
+
+.header-actions .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-card {
+    margin-bottom: var(--spacing-lg);
+}
+
+.form-card .btn {
+    margin-top: var(--spacing-md);
+}
+
+.icon-selector {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0.5rem;
+}
+
+.icon-option {
+    background: var(--bg-tertiary);
+    border: 2px solid transparent;
+    padding: 0.75rem;
+    border-radius: var(--radius-md);
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all var(--transition-base);
+}
+
+.icon-option:hover {
+    background: var(--bg-secondary);
+    transform: scale(1.1);
+}
+
+.icon-option.active {
+    border-color: var(--primary);
+    background: var(--bg-secondary);
+    box-shadow: var(--shadow-glow);
+}
+
+.color-picker {
+    height: 50px;
+    cursor: pointer;
+}
+
+.budgets-grid {
+    margin-top: var(--spacing-lg);
+}
+
+.budget-wrapper {
+    position: relative;
+}
+
+.btn-delete-budget {
+    margin-top: var(--spacing-sm);
+    width: 100%;
+    padding: 0.5rem;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all var(--transition-base);
+}
+
+.btn-delete-budget:hover {
+    background: var(--danger-gradient);
+    color: var(--text-primary);
+    border-color: transparent;
+}
+
+.spinner-container {
+    display: flex;
+    justify-content: center;
+    padding: var(--spacing-xl);
+}
+
+.empty-state {
+    padding: var(--spacing-xl);
+}
+
+@media (max-width: 768px) {
+    .page-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--spacing-md);
+    }
+
+    .header-actions {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .header-actions .form-control,
+    .header-actions .btn {
+        width: 100%;
+    }
+
+    .icon-selector {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
